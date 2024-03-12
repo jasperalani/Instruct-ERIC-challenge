@@ -20,6 +20,7 @@ final class ServicesTest extends TestCase
         TYRLAB2,Tyrell Research,Synthetic Optics,pt");
     }
 
+    // Test what happens if you miss out the second argument when querying
     public function testQueryEmpty(): void
     {
         $this->prepareTests();
@@ -33,6 +34,7 @@ final class ServicesTest extends TestCase
         $this->assertSame($output, $expected_output);
     }
 
+    // Test successful query
     public function testQueryCorrect(): void
     {
         $this->prepareTests();
@@ -53,6 +55,7 @@ final class ServicesTest extends TestCase
         $this->assertSame($output, $expected_output);
     }
 
+    // Test query that's not found
     public function testQueryNotFound(): void
     {
         $this->prepareTests();
@@ -65,6 +68,7 @@ final class ServicesTest extends TestCase
         $this->assertSame($output, $expected_output);
     }
 
+    // Test the summary function
     public function testSummary(): void
     {
         $this->prepareTests();
